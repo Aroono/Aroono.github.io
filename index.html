@@ -2,28 +2,9 @@
 <html>
 <head>
   <title></title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  
+  <meta content="charset=UTF-8" />
 </head>
 <body>
-  <script type="text/javascript">  
-        function showPreview(source) {  
-            var file = source.files[0];  
-            var ExcelSheet = new ActiveXObject(file.name); 
-            if(window.FileReader) {  
-                var fr = new FileReader();  
-                fr.onloadend = function(e) {  
-                    document.getElementById("portrait").src = e.target.result;  
-                    console.log();
-                };  
-                fr.readAsDataURL(file);  
-                // if(!/image\/\w+/.test(file.type)){  
-                //     alert("请确保文件为图像类型");  
-                //     return false;  
-                // } 
-            }  
-        }  
-    </script>  
   
   <input type="file" name="file" onchange="showPreview(this)" />  
   <img id="portrait" src="" width="70" height="75">
