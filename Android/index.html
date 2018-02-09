@@ -1,0 +1,1037 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Microsoft YaHei Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="loveNight, Android, Python, 神锋" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="岁月如歌" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Android 和 Java 资源汇总
+
+
+API 等级API等级1：Android 1.0
+API等级2：Android 1.1 Petit Four
+API等级3：Android 1.5 Cupcake
+API等级4：Android 1.6 Donut
+API等级5：Android 2.0 Éclair
+API等级6：Android 2.0.1 Éclair
+API等级7：Android 2.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android Notes">
+<meta property="og:url" content="http://lovenight.github.io/Android/index.html">
+<meta property="og:site_name" content="岁月如歌">
+<meta property="og:description" content="Android 和 Java 资源汇总
+
+
+API 等级API等级1：Android 1.0
+API等级2：Android 1.1 Petit Four
+API等级3：Android 1.5 Cupcake
+API等级4：Android 1.6 Donut
+API等级5：Android 2.0 Éclair
+API等级6：Android 2.0.1 Éclair
+API等级7：Android 2.">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/Activity%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/fragment_lifecycle.png">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/activity_fragment_lifecycle.png">
+<meta property="og:image" content="http://7xo8t2.com1.z0.glb.clouddn.com/img/a-10.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-11.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-22.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-23.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-30.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-33.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-36.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-39.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-48.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-49.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-59.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-82.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-91.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-104.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-106.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-113.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-119.png">
+<meta property="og:image" content="http://image.uisdc.com/wp-content/uploads/2014/12/a-121.png">
+<meta property="og:updated_time" content="2016-09-27T03:01:47.156Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Notes">
+<meta name="twitter:description" content="Android 和 Java 资源汇总
+
+
+API 等级API等级1：Android 1.0
+API等级2：Android 1.1 Petit Four
+API等级3：Android 1.5 Cupcake
+API等级4：Android 1.6 Donut
+API等级5：Android 2.0 Éclair
+API等级6：Android 2.0.1 Éclair
+API等级7：Android 2.">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 14198272,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://lovenight.github.io/Android/"/>
+
+  <title>
+  
+
+  
+    Android Notes | 岁月如歌
+  
+</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=58588376";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">岁月如歌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-android">
+          <a href="/Android" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-android"></i> <br />
+            
+            Android
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-python">
+          <a href="/Python" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            Python
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/Notes" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            Notes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/Links" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            Links
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+      <blockquote class="blockquote-center">Android 和 Java 资源汇总</blockquote>
+
+
+<h1 id="API_等级">API 等级</h1><pre><code>API等级<span class="number">1</span>：Android <span class="number">1.0</span>
+API等级<span class="number">2</span>：Android <span class="number">1.1</span> Petit Four
+API等级<span class="number">3</span>：Android <span class="number">1.5</span> Cupcake
+API等级<span class="number">4</span>：Android <span class="number">1.6</span> Donut
+API等级<span class="number">5</span>：Android <span class="number">2.0</span> Éclair
+API等级<span class="number">6</span>：Android <span class="number">2.0</span><span class="number">.1</span> Éclair
+API等级<span class="number">7</span>：Android <span class="number">2.1</span> Éclair
+API等级<span class="number">8</span>：Android <span class="number">2.2</span> - <span class="number">2.2</span><span class="number">.3</span> Froyo
+API等级<span class="number">9</span>：Android <span class="number">2.3</span> - <span class="number">2.3</span><span class="number">.2</span> Gingerbread
+API等级<span class="number">10</span>：Android <span class="number">2.3</span><span class="number">.3</span>-<span class="number">2.3</span><span class="number">.7</span> Gingerbread
+API等级<span class="number">11</span>：Android <span class="number">3.0</span> Honeycomb
+API等级<span class="number">12</span>：Android <span class="number">3.1</span> Honeycomb
+API等级<span class="number">13</span>：Android <span class="number">3.2</span> Honeycomb
+API等级<span class="number">14</span>：Android <span class="number">4.0</span> - <span class="number">4.0</span><span class="number">.2</span> Ice Cream Sandwich
+API等级<span class="number">15</span>：Android <span class="number">4.0</span><span class="number">.3</span> - <span class="number">4.0</span><span class="number">.4</span> Ice Cream Sandwich
+API等级<span class="number">16</span>：Android <span class="number">4.1</span> Jelly Bean
+API等级<span class="number">17</span>：Android <span class="number">4.2</span> Jelly Bean
+API等级<span class="number">18</span>：Android <span class="number">4.3</span> Jelly Bean
+API等级<span class="number">19</span>：Android <span class="number">4.4</span> KitKat
+API等级<span class="number">20</span>：Android <span class="number">4.4</span>W
+API等级<span class="number">21</span>：Android <span class="number">5.0</span> Lollipop
+API等级<span class="number">22</span>：Android <span class="number">5.1</span> Lollipop
+API等级<span class="number">23</span>：Android <span class="number">6.0</span> Marshmallow
+</code></pre><hr>
+<h1 id="恶补编程基础">恶补编程基础</h1><ul>
+<li><a href="http://zhuanlan.zhihu.com/xiao-jing-mo/19959253" target="_blank" rel="external">编程入门指南</a></li>
+</ul>
+<hr>
+<h1 id="Docs">Docs</h1><ul>
+<li><a href="http://developer.android.com/reference/packages.html" target="_blank" rel="external">官方API docs</a>：英文</li>
+<li><a href="http://www.android-doc.com/reference/packages.html" target="_blank" rel="external">Android API</a>：有些是中文，API Level最高只有19</li>
+</ul>
+<hr>
+<h1 id="工具网站">工具网站</h1><ul>
+<li><a href="http://www.androiddevtools.cn/" target="_blank" rel="external">AndroidDevTools</a></li>
+<li><a href="http://www.androidchina.net/" target="_blank" rel="external">Android 开发中文站</a></li>
+</ul>
+<hr>
+<h1 id="重点推荐">重点推荐</h1><ul>
+<li><p><a href="http://www.csdn.net/article/2015-10-05/2825847" target="_blank" rel="external">Android开发最佳实践</a><br><strong>摘要</strong>：前段时间，Google公布了Android开发最佳实践的一系列课程，涉及到一些平时开发过程中应该保持的良好习惯以及如何使用最新的Android Design Support Library来快速实现官方推荐的Material Design样式的应用。</p>
+</li>
+<li><p><a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">如何正确地写出单例模式</a><br><strong>摘要</strong>：单例模式算是设计模式中最容易理解，也是最容易手写代码的模式了吧。但是其中的坑却不少，所以也常作为面试题来考。本文主要对几种单例写法的整理，并分析其优缺点。很多都是一些老生常谈的问题，但如果你不知道如何创建一个线程安全的单例，不知道什么是双检锁，那这篇文章可能会帮助到你。</p>
+</li>
+<li><p><a href="http://www.infoq.com/cn/articles/android-in-depth-dalvik" target="_blank" rel="external">深入理解Android（二）：Java虚拟机Dalvik</a></p>
+</li>
+<li><a href="http://www.codeceo.com/article/133-java-interview-5-years.html" target="_blank" rel="external">近5年133个Java面试问题列表</a></li>
+</ul>
+<hr>
+<h1 id="技术博客">技术博客</h1><ul>
+<li><a href="https://github.com/android-cn/android-dev-cn" target="_blank" rel="external">中国部分 Android 开发者</a></li>
+<li><a href="https://github.com/android-cn/android-dev-com" target="_blank" rel="external">国外部分 Android 开发者</a></li>
+<li><a href="http://zmywly8866.github.io" target="_blank" rel="external">张明云</a></li>
+<li><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">郭霖</a>：《第一行代码》作者</li>
+<li><a href="http://www.trinea.cn/" target="_blank" rel="external">Trinea</a>：阿里巴巴 Java 开发工程师 <a href="https://github.com/trinea" target="_blank" rel="external">Github</a></li>
+<li><a href="http://stormzhang.com/" target="_blank" rel="external">stormzhang</a></li>
+<li><a href="https://github.com/mariotaku" target="_blank" rel="external">mariotaku</a></li>
+<li><a href="http://blog.csdn.net/eclipsexys" target="_blank" rel="external">eclipse_xu</a>：《Android群英会》作者徐宜生</li>
+<li><a href="http://blog.csdn.net/xiaanming" target="_blank" rel="external">xiaanming</a>：大量深入的Android技术文章</li>
+<li><a href="http://blog.csdn.net/dxw2015" target="_blank" rel="external">沧笙踏歌</a>：某 android 新手</li>
+<li><a href="http://blog.csdn.net/lzyzsd" target="_blank" rel="external">大头鬼Bruce</a>：中国 RxJava 教父级人物</li>
+<li><a href="https://www.gitbook.com/@yongjhih" target="_blank" rel="external">yongjhih的Gitbook</a>：RxJava 相关</li>
+<li><a href="http://thinkwyp.github.io/" target="_blank" rel="external">DaKa</a>：某Android</li>
+<li><a href="http://blog.csdn.net/liuhe688" target="_blank" rel="external">liuhe688</a></li>
+<li><a href="http://tengj.top/" target="_blank" rel="external">嘟嘟独立博客</a> Java相关</li>
+</ul>
+<h2 id="性能优化">性能优化</h2><ul>
+<li><a href="http://zhuanlan.zhihu.com/zmywly8866/20416881" target="_blank" rel="external">值得推荐的Android应用性能检测工具列表</a></li>
+<li><a href="http://wuche.info/archive.html" target="_blank" rel="external">行者无疆</a></li>
+<li><a href="http://developer.android.com/intl/zh-cn/training/best-performance.html" target="_blank" rel="external">Best Practices for Performance</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE" target="_blank" rel="external">Android Performance Patterns</a>:YouTube视频</li>
+<li><a href="http://hukai.me/blog/archives/" target="_blank" rel="external">胡凯</a>：腾讯Android</li>
+<li><a href="http://android-performance.com/" target="_blank" rel="external">Android-Performance.com</a>：一个只关注安卓性能优化以及最佳实践的Blog</li>
+</ul>
+<hr>
+<h1 id="第三方库">第三方库</h1><h2 id="MaterialEditText">MaterialEditText</h2><ul>
+<li><a href="https://github.com/rengwuxian/MaterialEditText" target="_blank" rel="external">MaterialEditText</a>：顾名思义，增加Material Design 特性的EditText</li>
+</ul>
+<h2 id="RxJava">RxJava</h2><ul>
+<li><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="external">RxJava</a></li>
+</ul>
+<p>资料除了上面的技术博客之外，还有：</p>
+<ul>
+<li><a href="https://github.com/lzyzsd/Awesome-RxJava" target="_blank" rel="external">Awesome-RxJava</a><br><strong>摘要</strong>：RxJava resources</li>
+<li><a href="http://www.devtf.cn/?s=RxJava" target="_blank" rel="external">开发技术前线中的RxJava资料</a></li>
+<li><a href="https://github.com/GDG-Korea/HelloRx" target="_blank" rel="external">韩国 GDG 的 RxJava 实例</a></li>
+<li><a href="https://github.com/kaushikgopal/RxJava-Android-Samples" target="_blank" rel="external">一些 RxJava Examples</a></li>
+<li><a href="https://github.com/mcxiaoke/RxDocs" target="_blank" rel="external">中文 RxDocs</a></li>
+<li>[The RxJava show with Dan Lew (Part 1)(<a href="http://fragmentedpodcast.com/episodes/3/" target="_blank" rel="external">http://fragmentedpodcast.com/episodes/3/</a>) <a href="http://fragmentedpodcast.com/episodes/4/" target="_blank" rel="external">(Part 2)</a>：两篇Fragmented Podcast的RxJava专题，第一篇入门介绍，第二篇讨论了很多RxJava的坑和很多Operators的用法</li>
+<li><a href="http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/" target="_blank" rel="external">Dan Lews RxJava Series</a></li>
+<li><a href="http://nerds.weddingpartyapp.com/tech/2014/09/15/learning-rxjava-with-android-by-example/" target="_blank" rel="external">Learning RxJava With Android by Example</a></li>
+<li><a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank" rel="external">Intro to Rx you’ve been missing</a></li>
+</ul>
+<hr>
+<h1 id="开源项目">开源项目</h1><ul>
+<li><a href="https://github.com/Trinea/android-open-project%20Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB" target="_blank" rel="external">Android开源项目分类汇总</a></li>
+<li><a href="http://www.verydemo.com/one_c55.html" target="_blank" rel="external">Demo大全</a></li>
+<li><a href="http://project.codefrom.com/" target="_blank" rel="external">开源项目集</a> 每天更新最新，最热，最有意思的开源项目</li>
+<li><a href="https://github.com/google" target="_blank" rel="external">Google项目合集</a> 供初学者学习代码和规范</li>
+<li><a href="https://github.com/googlesamples" target="_blank" rel="external">GoogleSamples</a></li>
+<li><a href="http://git.oschina.net/oschina/android-app" target="_blank" rel="external">开源中国客户端代码</a> 值得学习</li>
+<li><a href="https://github.com/MiCode" target="_blank" rel="external">小米开源项目</a></li>
+<li><a href="https://github.com/googlesamples?utf8=%25E2%259C%2593&amp;query=android" target="_blank" rel="external">Search Android - Google Samples</a>：谷歌官方会经常推出一些Android 新技术的Demo，比如每年的IO App 等等</li>
+<li>Android Api demos：下载SDK 之后，会在<code>&lt;sdk-insall-folder&gt;/samples/</code>中查看系统自带的好多Demo。</li>
+<li><a href="http://www.zhihu.com/question/26687642" target="_blank" rel="external">有没有适合 Android 开发初学者的 App 源码推荐？</a>：知乎问题</li>
+<li><a href="http://www.apkbus.com/android-1108-1-1.html" target="_blank" rel="external">Android小项目合集</a></li>
+</ul>
+<hr>
+<h1 id="学习资料">学习资料</h1><h2 id="基础">基础</h2><ul>
+<li><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android官方培训课程中文版</a></li>
+<li><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a>：stormzhang的经验之谈</li>
+<li><a href="http://www.imooc.com/course/list?c=android" target="_blank" rel="external">慕课网</a></li>
+<li><a href="https://www.udacity.com/course/viewer#!/c-ud853/l-1395568821/m-1643858568" target="_blank" rel="external">Developing Android Apps</a> Google和Udacity合作提供</li>
+<li><a href="https://github.com/GDGNanyang/studyjam" target="_blank" rel="external">Developing Android Apps 中文 SRT 发布区</a></li>
+<li><a href="http://studyjamscn.com/11-developing-android-apps" target="_blank" rel="external">Developing Android Apps 第一课中文版发布</a></li>
+<li><a href="http://ifeve.com/google-guava/" target="_blank" rel="external">Google Guava官方教程（中文版）</a></li>
+</ul>
+<h2 id="提高">提高</h2><ul>
+<li><a href="http://v.qq.com/vplus/bugly" target="_blank" rel="external">腾讯Bugly</a></li>
+<li><a href="http://www.infoq.com/cn/presentations" target="_blank" rel="external">Info演讲</a>部分与Android相关</li>
+<li><a href="http://club.alibabatech.org/" target="_blank" rel="external">阿里技术沙龙</a></li>
+<li><a href="http://jcodecraeer.com/" target="_blank" rel="external">泡在网上的日子</a></li>
+</ul>
+<h2 id="常用图片">常用图片</h2><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/Activity%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="Activity生命周期.png"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/fragment_lifecycle.png" alt="fragment_lifecycle.png"><br><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/activity_fragment_lifecycle.png" alt="activity_fragment_lifecycle.png"></p>
+<hr>
+<h1 id="开发工具">开发工具</h1><ul>
+<li>AndroidStudio<br><a href="http://www.android-studio.org/" target="_blank" rel="external">AndroidStudio社区</a><br><a href="http://www.codeceo.com/article/android-studio-skills.html" target="_blank" rel="external">提高效率的 Android Studio 技巧汇总</a></li>
+</ul>
+<hr>
+<h1 id="UI">UI</h1><h2 id="配色">配色</h2><p><a href="http://appui.mobi/" target="_blank" rel="external">APP UI</a></p>
+<h2 id="素材">素材</h2><p><a href="http://www.sketchappsources.com/all-free-sources.html" target="_blank" rel="external">SketchAppSources</a> Sketch资源<br><a href="http://www.easyicon.net/" target="_blank" rel="external">EasyIcon</a> 图标搜索<br><a href="http://www.toicon.com/" target="_blank" rel="external">ToIcon</a> 图标搜索<br><a href="https://thenounproject.com/" target="_blank" rel="external">Noun Project</a> 图标搜索<br><a href="http://www.uisdc.com/material-design-freebie" target="_blank" rel="external">新鲜热辣！一组实用的MATERIAL DESIGN风格素材！</a><br><a href="http://www.uisdc.com/high-quality-material-design-resource" target="_blank" rel="external">该跟上潮流了！一大波优质的MATERIAL DESIGN资源免费下载</a></p>
+<h2 id="Material_Design">Material Design</h2><p><a href="http://wiki.jikexueyuan.com/project/material-design/material-design-intro/introduction.html" target="_blank" rel="external">MaterialDesign中文版</a> 极客学院<br><a href="http://www.materialpalette.com/" target="_blank" rel="external">Materialpalette</a> Material配色工具<br><a href="http://www.materialup.com/" target="_blank" rel="external">Materialup</a> Material设计灵感<br><a href="http://www.uisdc.com/tag/material-design" target="_blank" rel="external">Material</a> 优设MaterialDesign版<br><a href="http://www.uisdc.com/material-design-google-io-app" target="_blank" rel="external">超赞！谷歌设计师的MATERIAL DESIGN实践心得</a><br><a href="http://www.uisdc.com/material-design-learning-experience" target="_blank" rel="external">学霸的自学笔记！MATERIAL DESIGN设计规范学习心得</a><br><a href="http://www.uisdc.com/material-design-trends" target="_blank" rel="external">超全面总结！深聊MATERIAL DESIGN引领的设计趋势</a></p>
+<h2 id="Google_Material资源">Google Material资源</h2><p><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNT0dFWFBjdTNKaXM/color_swatches.zip" target="_blank" rel="external">配色方案</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7V2s1ay1rTmM0dG8/Layout_Mobile_Whiteframe.ai" target="_blank" rel="external">界面模板：手机</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7U2hHWS1kS1JjT0k/Layout_Tablet_Whiteframe.ai" target="_blank" rel="external">界面模板：平板</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7UHpjdlh5bUd6Z2c/Layout_Desktop_Whiteframe.ai" target="_blank" rel="external">界面模板：桌面</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7SUJUS0dQVktmSXc/whiteframes.ai" target="_blank" rel="external">界面模板：线框图</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNZGNoWmJqVEhQYTQ/RobotoTTF.zip" target="_blank" rel="external">英文字体Roboto</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B6VCDMjD5_VAbXZ5WWxPRDhSVUU/RobotoSpecimenBooklet.pdf" target="_blank" rel="external">Roboto介绍</a><br><a href="http://www.google.com/get/noto/pkgs/NotoSansCJKSC-hinted.zip" target="_blank" rel="external">中文字体Noto</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7MGtzS0lpeFZUYmc/stickersheet_general.psd" target="_blank" rel="external">组件集psd</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7WDR5Q25OcXVuU28/stickersheet_general.ai" target="_blank" rel="external">组件集ai</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7Q3FVZ0FnM18yTHM/stickersheet_general.sketch" target="_blank" rel="external">组件集sketch</a><br><a href="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0B08MbvYZK1iNUzJ4c1VXWDYzbTA/material-design-icons-1.0.1.zip" target="_blank" rel="external">系统图标</a></p>
+<hr>
+<h1 id="Material标准">Material标准</h1><p><strong>完整版见<a href="http://www.uisdc.com/comprehensive-material-design-note" target="_blank" rel="external">MaterialDesign学习笔记</a></strong></p>
+<h2 id="颜色">颜色</h2><p><img src="http://7xo8t2.com1.z0.glb.clouddn.com/img/a-10.png" alt="a-10.png"><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-11.png" alt=""><br>黑色：[87% 普通文字] [54% 减淡文字] [26% 禁用状态/提示文字] [12% 分隔线]<br>白色：[100% 普通文字] [70% 减淡文字] [30% 禁用状态/提示文字] [12% 分隔线]</p>
+<h2 id="图标">图标</h2><ul>
+<li><p>桌面图标尺寸：48dp x 48dp</p>
+</li>
+<li><p>小图标尺寸：24dp X 24dp，图形限制在中央20dp X 20dp区域内。<br>栅格系统。线条、空隙尽量保持2dp宽，圆角半径2dp。特殊情况相应调整。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-22.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-23.png" alt=""><br>小图标的颜色使用纯黑与纯白，通过透明度调整：<br>黑色：[54% 正常状态] [26% 禁用状态]<br>白色：[100% 正常状态] [30% 禁用状态]</p>
+</li>
+</ul>
+<h2 id="图片">图片</h2><ul>
+<li><p>图片上的文字，需要淡淡的遮罩确保其可读性。深色的遮罩透明度在20%-40%之间，浅色的遮罩透明度在40%-60%之间。</p>
+</li>
+<li><p>Android L可以从图片中提取主色，运用在其他UI元素上</p>
+</li>
+<li><p>图片的加载过程非常讲究，透明度、曝光度、饱和度3个指标依次变化，效果相当细腻。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-30.png" alt=""></p>
+</li>
+</ul>
+<h2 id="文字">文字</h2><ul>
+<li><p>英文字体使用Roboto，中文字体使用Noto。<br>Roboto有6种字重：Thin、Light、Regular、Medium、Bold 和 Black<br>Noto有7种字重：Thin, Light、DemiLight、Regular、Medium、Bold 和 Black。</p>
+</li>
+<li><p>常用字号</p>
+<blockquote>
+<p>12sp 小字提示<br>14sp（桌面端13sp） 正文/按钮文字<br>16sp（桌面端15sp） 小标题<br>20sp Appbar文字<br>24sp 大标题<br>34sp/45sp/56sp/112sp 超大号文字</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="布局">布局</h2><ul>
+<li><p>所有可操作元素最小点击区域尺寸：48dp X 48dp</p>
+</li>
+<li><p>栅格系统的最小单位是8dp，一切距离、尺寸都应该是8dp的整数倍。</p>
+</li>
+<li><p>常见尺寸与距离</p>
+<blockquote>
+<p>顶部状态栏高度：24dp<br>Appbar最小高度：56dp<br>底部导航栏高度：48dp<br>悬浮按钮尺寸：56x56dp/40x40dp<br>用户头像尺寸：64x64dp/40x40dp<br>小图标点击区域：48x48dp<br>侧边抽屉到屏幕右边的距离：56dp<br>卡片间距：8dp<br>分隔线上下留白：8dp<br>大多元素的留白距离：16dp<br>屏幕左右对齐基线：16dp<br>文字左侧对齐基线：72dp</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-33.png" alt=""></p>
+<h2 id="组件">组件</h2><ul>
+<li><p>Bottom Sheets，列表或网格式<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-36.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-39.png" alt=""></p>
+</li>
+<li><p>Cards，统一2dp圆角<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-48.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-49.png" alt="这里写图片描述"></p>
+</li>
+<li><p>Dialogs<br>取消类操作项放在左边，引起变化的操作项放在右边。<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-59.png" alt=""></p>
+</li>
+<li><p>Grids，网格中的单元格间距是2dp或8dp</p>
+</li>
+<li><p>Lists<br>如果列表项内容文字超过3行，请改用卡片。如果列表项的主要区别在于图片，请改用网格。</p>
+</li>
+<li><p>Menus<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-82.png" alt=""></p>
+</li>
+<li><p>SnackBars &amp; Toasts<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-91.png" alt=""></p>
+</li>
+<li><p>Tabs，选中项的下划线高度是2dp。</p>
+</li>
+<li><p>Text fields，激活状态和错误状态，横线的宽度变为2dp<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-104.png" alt=""><br>输入框提示文字，可以在输入内容后，缩小停留在输入框左上角<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-106.png" alt=""><br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-113.png" alt="这里写图片描述"></p>
+</li>
+<li><p>ToolTips<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-119.png" alt=""></p>
+</li>
+<li><p>Navigation Drawer<br><img src="http://image.uisdc.com/wp-content/uploads/2014/12/a-121.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<h1 id="经验教训">经验教训</h1><ol>
+<li>小米4真机调试，除了开启开发者选项和USB调试外，必须用买手机时附带的数据线。就算小米2的数据线也不行，虽然一样能用来传输文件，但是调试时显示Unknown</li>
+<li>还是小米，写了个收短信的APP，在模拟器上测试通过。但是在小米4上却无法收到。最后发现权限管理里该APP的默认短信权限是<code>询问</code>，把它改成<code>允许</code>才成功。不知道有没有更好的解决办法，在配置文件里申请了权限还不够。</li>
+<li>电脑上的文件，在安卓上用自己写的APP打开是乱码。百度了原来安卓上使用的是utf-8编码，在IO流中指定即可。</li>
+<li>这个实际上是Java写Java工具时遇到过的坑，现在写安卓用到Calendar又想了起来。一定要加上这一句<code>calendar.setTimeZone(TimeZone.getTimeZone(&quot;GMT+8&quot;));</code>免得出现奇怪的时间问题。</li>
+<li>如果XML中注册的组件没有写<code>layout-width</code>或<code>layout-height</code>属性，则APP启动时会报错退出。</li>
+<li>Android 重写了 toString()方法，如果需要用Java默认的toString()来识别是否同一对象，需要自己实现一次。</li>
+<li>使用adb命令安装APK时，就算文件在当前目录下，也必须加一个<code>/</code>，如：<code>adb install /xxx.apk</code></li>
+</ol>
+<p>To Be Continued …</p>
+<hr>
+<h1 id="最佳实践">最佳实践</h1><h2 id="App中再按一次退出">App中再按一次退出</h2><p>法一：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">long</span> exitTime = <span class="number">0</span>;</span><br><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((System.currentTimeMillis() - exitTime) &gt; <span class="number">2000</span>) &#123;</span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>,R.string.press_again_exit_app,Toast.LENGTH_SHORT).show();</span><br><span class="line">        exitTime = System.currentTimeMillis();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        finish();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Toast toast;</span><br><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    toast = Toast.makeText(<span class="keyword">this</span>, <span class="string">"再按一次退出"</span>, Toast.LENGTH_LONG);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">null</span> == toast.getView.getParent())&#123;</span><br><span class="line">        toast.show();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        System.exit(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+    
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="loveNight" />
+          <p class="site-author-name" itemprop="name">loveNight</p>
+          <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，唯挑心灯伴夜霭</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/loveNight" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:286242151@qq.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://segmentfault.com/u/xuxian" target="_blank" title="SegmentFault">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  SegmentFault
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wu-wu-4-90" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/kinglearnjava" title="我的CSDN博客" target="_blank">我的CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.sina.com.cn/u/1069913250" title="我的新浪博客" target="_blank">我的新浪博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ta.qq.com" title="腾讯分析" target="_blank">腾讯分析</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#API_等级"><span class="nav-number">1.</span> <span class="nav-text">API 等级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#恶补编程基础"><span class="nav-number">2.</span> <span class="nav-text">恶补编程基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docs"><span class="nav-number">3.</span> <span class="nav-text">Docs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具网站"><span class="nav-number">4.</span> <span class="nav-text">工具网站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重点推荐"><span class="nav-number">5.</span> <span class="nav-text">重点推荐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术博客"><span class="nav-number">6.</span> <span class="nav-text">技术博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性能优化"><span class="nav-number">6.1.</span> <span class="nav-text">性能优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方库"><span class="nav-number">7.</span> <span class="nav-text">第三方库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MaterialEditText"><span class="nav-number">7.1.</span> <span class="nav-text">MaterialEditText</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJava"><span class="nav-number">7.2.</span> <span class="nav-text">RxJava</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开源项目"><span class="nav-number">8.</span> <span class="nav-text">开源项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习资料"><span class="nav-number">9.</span> <span class="nav-text">学习资料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">9.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提高"><span class="nav-number">9.2.</span> <span class="nav-text">提高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用图片"><span class="nav-number">9.3.</span> <span class="nav-text">常用图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发工具"><span class="nav-number">10.</span> <span class="nav-text">开发工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UI"><span class="nav-number">11.</span> <span class="nav-text">UI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配色"><span class="nav-number">11.1.</span> <span class="nav-text">配色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#素材"><span class="nav-number">11.2.</span> <span class="nav-text">素材</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Material_Design"><span class="nav-number">11.3.</span> <span class="nav-text">Material Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google_Material资源"><span class="nav-number">11.4.</span> <span class="nav-text">Google Material资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Material标准"><span class="nav-number">12.</span> <span class="nav-text">Material标准</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#颜色"><span class="nav-number">12.1.</span> <span class="nav-text">颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图标"><span class="nav-number">12.2.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">12.3.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">12.4.</span> <span class="nav-text">文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局"><span class="nav-number">12.5.</span> <span class="nav-text">布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件"><span class="nav-number">12.6.</span> <span class="nav-text">组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经验教训"><span class="nav-number">13.</span> <span class="nav-text">经验教训</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最佳实践"><span class="nav-number">14.</span> <span class="nav-text">最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#App中再按一次退出"><span class="nav-number">14.1.</span> <span class="nav-text">App中再按一次退出</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">loveNight
+
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
