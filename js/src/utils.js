@@ -29,13 +29,13 @@ NexT.utils = NexT.$u = {
         }
       });
 
-    // $('.fancybox').fancybox({
-    //   helpers: {
-    //     overlay: {
-    //       locked: false
-    //     }
-    //   }
-    // });
+    $('.fancybox').fancybox({
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
+    });
   },
 
   lazyLoadPostsImages: function () {
